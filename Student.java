@@ -2,13 +2,15 @@ class Student {
     private String name;
     private long prn;
     private String branch;
+    private String batch;
     private float cgpa;
 
     // Constructor
-    public Student(String name, long prn, String branch, float cgpa) {
+    public Student(String name, long prn, String branch, String batch, float cgpa) {
         setName(name);
         setPRN(prn);
         setBranch(branch);
+        setBatch(batch);
         setCGPA(cgpa);
     }
 
@@ -37,6 +39,14 @@ class Student {
         return branch;
     }
 
+    public void setBatch(String batch) {
+        this.batch = batch;
+    }
+
+    public String getBatch() {
+        return batch;
+    }
+
     public void setCGPA(float cgpa) {
         this.cgpa = cgpa;
     }
@@ -50,6 +60,7 @@ class Student {
         System.out.println("Name: " + getName() + 
                            " | PRN: " + getPRN() + 
                            " | Branch: " + getBranch() + 
-                           " | CGPA: " + getCGPA());
+                           " | CGPA: " + getCGPA() +
+                           " | Batch: " + getBatch());
     }
 }
