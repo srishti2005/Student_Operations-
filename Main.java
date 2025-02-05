@@ -12,8 +12,10 @@ class Main{
 		String branch = sc.nextLine();
 		System.out.println("Enter Student CGPA:");
 		float cgpa = Float.parseFloat(sc.nextLine());
+		System.out.println("Enter Student batch:");
+		String batch = sc.nextLine();
 		StudentOperations operations = new StudentOperations();
-		Student student = new Student(name,prn,branch,cgpa);
+		Student student = new Student(name,prn,branch,batch,cgpa);
 		operations.addStudent(student);
 		operations.displayStudents();
 	}
